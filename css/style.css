@@ -303,7 +303,11 @@ span.consent a {
 }
 
 input[type="checkbox"] {
-  display: inline-block;
+  font-size: 10px;
+}
+
+.gdpr {
+  display: flex;
 }
 
 /* Artists */

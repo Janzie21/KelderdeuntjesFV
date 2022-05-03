@@ -220,19 +220,21 @@
                 </div>
                 <div class="form-group">
                   <label for="consent"></label>
-                  <input
-                    type="checkbox"
-                    onchange="document.getElementById('submit').disabled = !this.checked;"
-                  />
-                  <span class="consent"
-                    >I agree with with the terms end conditions that can be
-                    found
-                    <a
-                      target="_blank"
-                      href="https://www.termsfeed.com/live/28044373-5bd3-4d0c-b2c3-c4308aa1839c"
-                      >Here</a
-                    ></span
-                  >
+                  <div class="gdpr">
+                    <input
+                      type="checkbox"
+                      onchange="document.getElementById('submit').disabled = !this.checked;"
+                    />
+                    <span class="consent"
+                      >I agree with with the terms end conditions that can be
+                      found
+                      <a
+                        target="_blank"
+                        href="https://www.termsfeed.com/live/28044373-5bd3-4d0c-b2c3-c4308aa1839c"
+                        >Here</a
+                      ></span
+                    >
+                  </div>
                 </div>
                 <input class="btn" type="submit" value="Send" id="submit" />
               </form>

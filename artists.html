@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Kelderdeuntjes, our artists</title>
+  </head>
+  <body id="home">
+    <header class="hero">
+      <div class="navbar top" id="navbar">
+        <img
+          src="images/home/output-onlinepngtools.png"
+          alt="Kelderdeuntjes logo"
+          id="logo"
+        />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="artists.html">Artists</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="podcasts.html">Podcasts</a></li>
+            <li><a href="booking.html">Booking</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <h1>Artists</h1>
+        <div class="hero-logo">
+          <img
+            src="images/home/output-onlinepngtools.png"
+            alt="Kelderdeuntjes logo"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="artists">
+        <div class="artist">
+          <img src="images/artists/chumba.jpg" alt="Chumba" />
+          <h2>Chumba</h2>
+          <h3>Founder</h3>
+          <a href="chumba.html" class="btn btn-secondary">Learn more</a>
+        </div>
+        <div class="artist">
+          <img src="images/artists/stu&brew.jpg" alt="Stu & Bru" />
+          <h2>Stu & Bru</h2>
+          <h3>Resident</h3>
+          <a href="stubru.html" class="btn btn-secondary">Learn more</a>
+        </div>
+        <div class="artist">
+          <img src="images/artists/Grossand.jpg" alt="Grossand" />
+          <h2>Grossand</h2>
+          <h3>Resident</h3>
+          <a href="grossand.html" class="btn btn-secondary">Learn more</a>
+        </div>
+        <div class="artist">
+          <img src="images/artists/Mannez.jpg" alt="Mannez" />
+          <h2>Mannez</h2>
+          <h3>Resident</h3>
+          <a href="mannez.html" class="btn btn-secondary">Learn more</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer bg-secondary">
+      <div class="social">
+        <a
+          target="_blank"
+          href="https://www.facebook.com/search/top?q=kelderdeuntjes"
+          class="facebook"
+          ><i class="fab fa-facebook fa-2x"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/kelderdeuntjes/"
+          class="insta"
+          ><i class="fab fa-instagram fa-2x"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://soundcloud.com/user-978626890"
+          class="soundcloud"
+          ><i class="fa-brands fa-soundcloud fa-2x"></i
+        ></a>
+        <a target="_blank" href="mailto:kelderdeuntjes@gmail.com" class="email"
+          ><i class="fa fa-envelope fa-2x"></i
+        ></a>
+      </div>
+      <p>Copyright &copy; 2022 - Nick Janssen</p>
+    </footer>
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scroll = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+    </script>
+  </body>
+</html>

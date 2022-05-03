@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Kelderdeuntjes, booking page</title>
+  </head>
+  <body id="home">
+    <header class="hero">
+      <div class="navbar top" id="navbar">
+        <img
+          src="images/home/output-onlinepngtools.png"
+          alt="Kelderdeuntjes logo"
+          id="logo"
+        />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="artists.html">Artists</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="podcasts.html">Podcasts</a></li>
+            <li><a href="booking.html">Booking</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content"></div>
+      <audio id="myAudio" loop>
+        <source src="music/OnlyMP3.to - kelderdeuntjes 2-Zu9gGqd9X4U-192k-1650223019128.mp3" type="audio/mp3">
+     </audio>
+     
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Zu9gGqd9X4U" type="video/mp4" allow="autoplay" id="video" style="display:none"></iframe>        <iframe
+          class="booking"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/Zu9gGqd9X4U? &autoplay=1&mute=1&loop=1&controls=0&playlist=Zu9gGqd9X4U"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; modestbranding; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        
+      </div>
+    </header>
+
+    <main>
+      <!-- Contact -->
+
+      <section id="contact" class="contact flex-columns">
+        <div class="row">
+          <div class="column">
+            <div class="column-2 bg-secondary">
+              <h2>Hire us</h2>
+              <p>
+                Let us know if you want to hire us! Fill in your data and
+                questions in the form below and we will contact you as soon as
+                possible. Keep on raving!
+              </p>
+              <form action="process.php" method="POST" class="callback-form">
+                <div class="form-group">
+                  <label for="name"></label>
+                  <input
+                    class="booking"
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email"></label>
+                  <input
+                    class="booking"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone"></label>
+                  <input
+                    class="booking"
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter phone"
+                  />
+                <div class="form-group">
+                  <label for="textfield"></label>
+                  <input
+                    class="booking"
+                    type="textfield"
+                    name="message"
+                    id="message"
+                    placeholder="Leave your message"
+                  />
+                </div>
+                <input class="btn" type="submit" value="Send" id="submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-secondary">
+      <div class="social">
+        <a
+        target="_blank"
+        href="https://www.facebook.com/search/top?q=kelderdeuntjes"
+        class="facebook"
+        ><i class="fab fa-facebook fa-2x"></i
+        ></a>
+        <a 
+        target="_blank"
+        href="https://www.instagram.com/kelderdeuntjes/" class="insta"
+        ><i class="fab fa-instagram fa-2x"></i
+        ></a>
+        <a 
+        target="_blank"
+        href="https://soundcloud.com/user-978626890" class="soundcloud"
+        ><i class="fa-brands fa-soundcloud fa-2x"></i
+        ></a>
+        <a 
+        target="_blank"
+        href="mailto:kelderdeuntjes@gmail.com" class="email"
+        ><i class="fa fa-envelope fa-2x"></i
+        ></a>
+      </div>
+      <p>Copyright &copy; 2022 - Nick Janssen</p>
+    </footer>
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scroll = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+    </script>
+    <script>
+         navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+        
+        var x = document.getElementById("myAudio"); 
+        x.play();
+     
+         // stop microphone stream acquired by getUserMedia
+         stream.getTracks().forEach(function (track) { track.stop(); });
+     });
+   </script>
+    <script type="text/javascript">
+      var tag = document.createElement("script");
+      tag.id = "iframe-demo";
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("existing-iframe-example", {
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange,
+          },
+        });
+      }
+      function onPlayerReady(event) {
+        document.getElementById("existing-iframe-example").style.borderColor =
+          "#FF6D00";
+      }
+      function changeBorderColor(playerStatus) {
+        var color;
+        if (playerStatus == -1) {
+          color = "#37474F"; // unstarted = gray
+        } else if (playerStatus == 0) {
+          color = "#FFFF00"; // ended = yellow
+        } else if (playerStatus == 1) {
+          color = "#33691E"; // playing = green
+        } else if (playerStatus == 2) {
+          color = "#DD2C00"; // paused = red
+        } else if (playerStatus == 3) {
+          color = "#AA00FF"; // buffering = purple
+        } else if (playerStatus == 5) {
+          color = "#FF6DOO"; // video cued = orange
+        }
+        if (color) {
+          document.getElementById("existing-iframe-example").style.borderColor =
+            color;
+        }
+      }
+      function onPlayerStateChange(event) {
+        changeBorderColor(event.data);
+      }
+    </script>
+  </body>
+</html>

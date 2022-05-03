@@ -218,6 +218,13 @@
                     placeholder="Enter phone"
                   />
                 </div>
+                <div class="form-group">
+                  <label for="consent"></label>
+                  <input
+                    type="checkbox"
+                    onchange="document.getElementById('submit').disabled = !this.checked;"
+                  />
+                </div>
                 <input class="btn" type="submit" value="Send" id="submit" />
               </form>
             </div>

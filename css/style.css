@@ -290,6 +290,17 @@ img {
   border-radius: 50%;
 }
 
+/* GDPR */
+
+span.consent {
+  color: #fff;
+  display: inline-block;
+}
+
+span.consent a {
+  color: #fff;
+}
+
 /* Artists */
 
 .artists {

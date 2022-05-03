@@ -299,6 +299,11 @@ span.consent {
 
 span.consent a {
   color: #fff;
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
 }
 
 /* Artists */

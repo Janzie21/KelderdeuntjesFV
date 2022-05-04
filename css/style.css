@@ -159,25 +159,6 @@ img {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* Icons */
-
-.icons {
-  padding: 30px;
-}
-
-.icons h3 {
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.icons i {
-  background: #28a745;
-  color: #fff;
-  padding: 1rem;
-  margin-bottom: 15px;
-  border-radius: 50%;
-}
-
 /* Cases */
 
 .cases img:hover {
@@ -222,6 +203,7 @@ img {
 .callback-form .btn {
   padding: 12px 0;
   margin-top: 20px;
+  background-color: #fff;
 }
 
 /* Footer */
@@ -314,8 +296,8 @@ a.consent {
 }
 
 .artist img {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   object-fit: center center/cover;
 }
 

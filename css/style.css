@@ -388,6 +388,7 @@ a.consent {
 .eventsection {
   margin-top: 50px;
 }
+
 .gallery {
   display: flex;
   justify-content: space-between;
@@ -409,6 +410,10 @@ a.consent {
   height: 50vh;
   max-height: 100%;
   margin-bottom: 20px;
+}
+
+.info-empty {
+  visibility: hidden;
 }
 
 .info img {
